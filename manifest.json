@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "Earn the Time",
+  "version": "0.1",
+
+  "description": "The more time spend productively, the more time you earn to spend on entertainment",
+  "homepage_url": "https://github.com/Flimm/earn-the-time",
+
+
+  "icons": {
+    "96": "icons/piggy-96.png"
+  },
+
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_scripts/timer.js"]
+    }
+  ],
+
+  "options_ui": {
+    "page": "pages/options.html",
+    "browser_style": true,
+    "chrome_style": true,
+    "open_in_tab": false
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "earn_the_time@example.com",
+      "strict_min_version": "42.0"
+    }
+  }
+}

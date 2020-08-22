@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Options</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="module" async src="options.js"></script>
+  <style>
+    textarea { width: 100%; }
+    label { margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+  <label>
+    <div><b>Work websites</b></div>
+    <div>
+      <textarea
+        disabled
+        class="js-setting"
+        data-setting="workDomains"
+        placeholder="example1.com&#10;example2.com"
+        rows=10
+      ></textarea>
+    </div>
+  </label>
+  <label>
+    <div><b>Entertainment websites</b></div>
+    <div>
+      <textarea
+        disabled
+        class="js-setting"
+        data-setting="entertainmentDomains"
+        placeholder="example3.com&#10;example4.com"
+        rows=10
+      ></textarea>
+    </div>
+  </label>
+  <div>
+    <button disabled type="button" id="js-save">Save</button>
+  </div>
+</body>
+</html>
